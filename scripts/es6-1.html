@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 변수 : let, const</title>
+    <script>
+        // var num = 10;
+        // var num = 20;
+        // document.write(num);
+        //var 변수를 중복 선언 가능 
+
+        // let num = 10;
+        // let num = 20;
+        // document.write(num); //에러
+        // //let 변수는 중복 선언 안됨.
+
+        const DIVISION_VALUE =100;
+        // const DIVISION_VALUE =200; // const 중복 선언 안됨.
+        // DIVISION_VALUE =300; // 상수 즉 값을 변경할 수 없음 
+
+        let cm = prompt('cm을 입력하세요','');
+        let m = cm / DIVISION_VALUE;
+        document.write(m+ 'm입니다.');
+
+        //함수 레벨 스코프와 블록 레벨 스코프
+        //전역변수, 지역변수
+
+        var kor=90; //전역변수
+        function getScore(){
+            kor =100; //전역변수
+            console.log(kor); //100
+        }
+        getScore();
+        console.log(kor); //100
+
+        var kor=90; //전역변수
+        function getScore(){
+            var kor =100; //지역변수
+            console.log(kor); //100
+        }
+        getScore();
+        console.log(kor);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

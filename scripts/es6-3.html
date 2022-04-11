@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표 함수</title>
+</head>
+<body>
+<script>
+    //선언적 함수 
+        compute(10,100);
+    function compute(a,b){
+        var x=a;
+        var y=b;
+        var result =x/y;
+        console.log(result);
+    }
+
+    //익명함수
+    var compute2 = function(a,b){
+        var x=a;
+        var y=b;
+        var result =x*y;
+        console.log(result);
+    }
+    compute2(3,2);
+
+//즉시 실행 함수-선언과 동시에 실행 함수, 재호출 안됨. 한번만 실행
+(function(a){
+    var sum=a;
+    console.log(sum);
+})(10);
+
+var instant = (function(){
+    console.log('즉시 실행함수');
+})();
+
+//매개변수의 개수가 정해지지 않은 함수
+//artument객체는 인자값을 저장해주는 객체
+function showSubject(){
+    for(i=0; i<arguments.length; i++){
+        console.log(arguments[i]);
+    }
+}
+showSubject('html', 'css', 'js', 'jquery');
+
+//ess6 화살표 함수-funtion키워드 생략, {} 생략, return 생략
+var TheFnc = function(a,b){
+    return a*b;
+}
+console.log( TheFnc(2,5) );
+
+var TheFnc = (a,b) => a*b;
+console.log( TheFnc(2,5) );
+
+//익명함수 
+var TheFnc2 = function(c,d){
+    return c+d;
+    return sum;
+}
+console.log( TheFnc2(2,5) );
+
+var TheFnc2 = (c,d) =>{
+    return c+d;
+    return sum;
+}
+console.log(TheFnc2(10,5));
+
+
+// compute(10,100);
+//     function compute(a,b){
+//         var x=a;
+//         var y=b;
+//         var result =x/y;
+//         console.log(result);
+//     } 
+
+var compute3 =(a,b) =>{
+    return a+b;
+    return sum;
+}
+console.log(compute3(2,3))
+
+var compute = (a,b) => {
+            var x = a;
+            var y = b;
+            var result = x/y;
+            console.log(result);
+        }
+        compute(100,10);
+
+        var compute2 = (a,b) => {
+            var x = a;
+            var y = b;
+            var result = x * y;
+            console.log(result);
+        }
+        compute2(10,10);
+
+</script>
+</body>
+</html>

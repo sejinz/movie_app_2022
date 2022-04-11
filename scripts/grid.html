@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,700&display=swap');
+        .grid-container{
+            margin: 0 auto;
+            display: grid;
+            width: 600px;
+            grid-template-rows: 70px 200px 70px;
+            grid-template-columns: repeat(3, 1fr);
+            /*그리드에 열(칸)을 각각 동일한 비율(fr)로 3개 만들기*/
+            grid-gap: 10px;
+            font-family: "Rubik";
+            font-size: 25px;
+        }
+        .grid-item{
+            background-color: skyblue;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid-item.header{
+            grid-column: 1/-1;
+            grid-row-start:1;
+            grid-row-end: 2;
+        } /*경계선 번호 처음(1)부터 끝(-1)까지 영역을 차지해요*/
+    .grid-item.nav{
+        grid-row-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .grid-item.main{
+        grid-row-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .grid-item.aside{
+        grid-row-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .grid-item.footer{
+            grid-column: 1/-1;
+            grid-row-start:3;
+            grid-row-end: 4;
+
+        /* grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4; */
+    }
+
+
+    
+    
+    
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item header">header</div>
+        <div class="grid-item nav">nav</div>
+        <div class="grid-item main">main content</div>
+        <div class="grid-item aside">aside</div>
+        <div class="grid-item footer">footer</div>
+    </div>
+</body>
+</html>

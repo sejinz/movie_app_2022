@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+    <script>
+        //객체: 변수는 데이터 값을 하나 밖에 저장하지 못하지만,
+        // 객체는 데이터 값을 필요한 대로 만들어서 사용할 수 있다. 
+        // var 변수 = {
+        //     name:홍길동,
+        //     age:20,
+        //     nationality:'한국'
+        // };
+        // props 객체 ={
+        //     propsName1: "커피", //key:value,
+        //     propsName2: "ture"
+        //     propsName3: "Array(6)"
+        // }
+
+        //사용자 정의 객체, 객체 리터럴
+        var info ={
+
+            subject: 'css',
+            credit: 1,
+            prin0ut: function(){
+                                        return info.subject + ', ' + info.credit+'학점';
+            }
+        };
+        console.log(info.subject); //css
+        console.log(info.credit); 
+        console.log(info.prin0ut()); 
+
+        info.days =20;
+        console.log(info.days);
+
+        delete info.credit;
+        console.log(info.credit);
+
+        info.prin0ut =function(){
+            return info.subject + "," + info.days +'일';
+        };
+        console.log(info.prin0ut());
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

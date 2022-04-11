@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 요소 접근 명령문 및 메서드</title>
+    <script>
+        var base=[10,20,30,40,50];
+        // var area = base.map(function(value, index, array){
+        //                                     return value*8;})
+
+        //화살표 함수
+        var area = base.map((value, index, array) => value*8);
+        console.log(area);
+
+        //filter()는 조건에 맞는 배열 요소들만 새로운 배열로 만들어준다.
+        var data=['js',20,30,'html','css',40];
+        var num = data.filter(function(value, index){
+                                        return typeof value === 'number';
+        });
+
+        var num = data.filter((value,index) =>
+            typeof value === 'number');
+            console.log(num);
+
+
+            //for..in문 은 배열의 인덱스 값 반환
+            var citys=['서울','대구','대전','부산'];
+            for(var index in citys){
+                console.log(index);
+            }
+            //for..of문 은 배열의 값을 반환
+            var citys=['서울','대구','대전','부산'];
+            for(var value of citys){
+                console.log(value);
+            }
+
+            //forEach()문
+            var num=[1,2,3];
+            num.forEach((value,index,array)=>{
+                console.log(value);
+                console.log(index);
+                console.log(array);
+            });
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

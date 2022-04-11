@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성자 함수</title>
+</head>
+<body>
+<script>
+        // <!-- //객체 생성자 함수  -->
+    function Info(a, b){
+        this.subject =a;
+        this.credit =b;
+        this.print0ut =function(){
+            return this.subject + ',' + this.credit+'학점';
+        };
+    };
+
+    var sub1 = new Info('html',1);
+    console.log(sub1.subject)//html
+    console.log(sub1.credit)//1
+    console.log(sub1.print0ut())//html,1
+
+    var sub2 = new Info('css',2);
+    console.log(sub2.subject)//css
+    console.log(sub2.credit)//2
+    console.log(sub2.print0ut())
+</script>
+</body>
+</html>
